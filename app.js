@@ -37,6 +37,7 @@ const listarContatos = async () => {
             <div class="header">Foto</div>
             <div class="header">Nome</div>
             <div class="header">Email</div>
+            <div class="header">Endereço</div>
             <div class="header">Cidade</div>
             <div class="header">Celular</div>
             <div class="header">Ações</div>
@@ -58,6 +59,7 @@ const listarContatos = async () => {
                 <div>${contato.nome}</div>
                 <div>${contato.email}</div>
                 <div>${contato.cidade}</div>
+                <div>${contato.endereco}</div>
                 <div>${contato.celular}</div>
 
                 <div class="acoes">

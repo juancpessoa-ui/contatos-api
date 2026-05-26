@@ -1,83 +1,81 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="./app.js" defer type="module"></script>
-    <link rel="stylesheet" href=".\style.css">
+
+    <link rel="stylesheet" href="./style.css">
 
     <title>Contatos</title>
+</head>
 
-    
-    <body>
+<body>
+        <div class = "titulo"> Realizar Cadastro </div>
+    <header class="container">
 
-        <header class="container">
-    
-            <div class="bloco">
-    
-                <div class="inputbox">
-                    <input type="text" id="nome" required>
-                    <label for="nome">Nome</label>
-                </div>
-    
-                <div class="inputbox">
-                    <input type="text" id="celular" required>
-                    <label for="celular">Celular</label>
-                </div>
-    
-                <div class="inputbox">
-                    <input type="text" id="email" required>
-                    <label for="email">Email</label>
-                </div>
-    
-                <div class="inputbox">
-                    <input type="text" id="endereco" required>
-                    <label for="endereco">Endereço</label>
-                </div>
-    
-                <div class="inputbox">
-                    <input type="text" id="cidade" required>
-                    <label for="cidade">Cidade</label>
-                </div>
-    
+        <div class="bloco">
+
+            <div class="inputbox">
+                <input type="text" id="nome" required>
+                <label for="nome">Nome</label>
             </div>
-    
-            <div class="row">
-                <button id="btn">Salvar</button>
+
+            <div class="inputbox">
+                <input type="text" id="celular" required>
+                <label for="celular">Celular</label>
             </div>
-            <hr>
-        </header>
-        <main>
-            <div class="tabela">
 
-                <!-- cabeçalho -->
-                <div class="header">ID</div>
-                <div class="header">Nome</div>
-                <div class="header">Email</div>
-                <div class="header">Cidade</div>
-                <div class="header">Telefone</div>
-                <div class="header">Ações</div>
-            
-                <!-- linha -->
-                <div>1</div>
-                <div>Juan</div>
-                <div>juan@gmail.com</div>
-                <div>Jandira</div>
-                <div>(11)99999-9999</div>
-            
-                <div class="acoes">
-                    <button class="up">UP</button>
-                    <button class="delete">D</button>
-                </div>
-            
+            <div class="inputbox">
+                <input type="text" id="email" required>
+                <label for="email">Email</label>
             </div>
-        
-            
 
-        </main>
-        <footer>
+            <div class="inputbox">
+                <input type="text" id="endereco" required>
+                <label for="endereco">Endereço</label>
+            </div>
 
-        </footer>
-    </body>
-    
-    </html>
+            <div class="inputbox">
+                <input type="text" id="cidade" required>
+                <label for="cidade">Cidade</label>
+            </div>
+
+            <div class="inputbox">
+                <input type="text" id="foto">
+                <label for="Imagem">Url Imagem</label>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <button id="btn">Salvar</button>
+        </div>
+
+        <hr>
+
+    </header>
+
+    <main>
+
+        <div class="tabela" id="tabela">
+
+            <!-- cabeçalho -->
+            <div class="header">ID</div>
+            <div class="header">Nome</div>
+            <div class="header">Email</div>
+            <div class="header">Cidade</div>
+            <div class="header">Telefone</div>
+            <div class="header">Ações</div>
+
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+</body>
+
+</html>

@@ -2,34 +2,39 @@
 
 const URL = 'https://bakcend-fecaf-render.onrender.com/contatos'
 
+// GET
 export async function getContatos() {
-    const response = await fetch(URL)//Faz a requisição para a URL da API
-    if(!response.ok) throw new Error('Erro ao buscar contatos') // força lançar um erro caso haja algum, mesmo usando try/catch
-    return response.json()// Converte a resposta da API para JSON e retorna os dados
-    
-}
 
-export async function postContatos(contato) {
-    // Configurações da requisição
-    const options ={
-        // Define o método da requisição como POST
-        method: 'POST',
-        // Define o tipo de conteúdo enviado para a API
-        headers: {
-            'Content-Type': 'application/json'
-        },
-         // Converte o objeto contato para JSON
-        // para conseguir enviar no body da requisição
-        body: JSON.stringify(contato)
-    }
-     // Faz a requisição enviando os dados do contato
-    const response = await fetch(URL,options)
-    if(!response.ok) throw new Error('Erro ao buscar contatos') // força lançar um erro caso haja algum, mesmo usando try/catch
+    const response = await fetch(URL)
+
+    if(!response.ok)
+        throw new Error('Erro ao buscar contatos')
+
     return response.json()
 }
 
-//Metodo PUT
-export async function putContato(id,contato) {
+// POST
+export async function postContatos(contato) {
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(contato)
+    }
+
+    const response = await fetch(URL, options)
+
+    if(!response.ok)
+        throw new Error('Erro ao cadastrar contato')
+
+    return response.json()
+}
+
+// PUT
+export async function putContato(id, contato) {
+
     const options = {
         method: 'PUT',
         headers: {
@@ -37,20 +42,28 @@ export async function putContato(id,contato) {
         },
         body: JSON.stringify(contato)
     }
-    const response = fetch (`${URL}/${id}`,options)
 
-    if(!response.ok) throw new Error('Erro ao atualizar contato') // força lançar um erro caso haja algum, mesmo usando try/catch
-    
+    const response = await fetch(`${URL}/${id}`, options)
+
+    if(!response.ok)
+        throw new Error('Erro ao atualizar contato')
+
     return response.json()
 }
 
+// DELETE
 export async function deleteContato(id){
-    const options = { 
-        method: 'DELETE',
-    }
-    const response = fetch (`${URL}/${id}`,options)
 
-    if(!response.ok) throw new Error('Erro ao deletar contato')
+    const options = {
+        method: 'DELETE'
+    }
+
+    const response = await fetch(`${URL}/${id}`, options)
+
+    if(!response.ok)
+        throw new Error('Erro ao deletar contato')
 
     return true
 }
+
+
